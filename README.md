@@ -1,12 +1,17 @@
-# Fitness Journal
+# 🏋️‍♂️ Fitness Journal
 
-A full-stack portfolio project that tracks and analyzes workouts using data from Strava and Hevy. Built with Next.js, TailwindCSS, and PostgreSQL.
+A full-stack portfolio project to track and analyze workouts using Strava and Hevy data.
+
+🔗 [Live Site](https://fitness-journal.vercel.app)
+
+## Tech Stack
+- Next.js (App Router)
+- TailwindCSS
+- Recharts
+- PostgreSQL (via Supabase or Prisma - soon)
+- Deployed on Vercel
 
 ## Features
-
-- Workout dashboard
-- Data visualizations with Recharts
-- Strava integration
-- Mock UI and layout ready
-
-Deployed with Vercel.
+- Dashboard with workout cards
+- Weekly analytics chart
+- (Soon) Real workout data from APIs

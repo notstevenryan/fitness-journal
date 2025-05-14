@@ -12,6 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico" />
       <body className="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow container mx-auto px-4 py-8">
