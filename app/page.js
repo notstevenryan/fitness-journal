@@ -1,5 +1,6 @@
 // app/page.js
 import Link from 'next/link';
+import ConnectStravaButton from '../components/ConnectStravaButton';
 
 export default function Home() {
   return (
@@ -8,6 +9,9 @@ export default function Home() {
       <p className="text-lg text-gray-600">
         Track and visualize your workouts from Strava and Hevy.
       </p>
+      <div>
+      <ConnectStravaButton />
+      </div>
       <Link href="/dashboard">
         <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
           Go to Dashboard
