@@ -8,6 +8,7 @@ export default function StravaConnectButton() {
 
     const url = `https://www.strava.com/oauth/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&approval_prompt=auto&scope=${scope}`;
     window.location.href = url;
+    console.log('client_id:', clientId);
   };
 
   return (
