@@ -1,0 +1,64 @@
+📍 Phase 2: Data Integration (Strava & Hevy)
+
+🔑 Set up Strava OAuth flow
+🔌 Fetch user activity data from Strava
+💾 Design DB schema for workouts in PostgreSQL
+🧠 Choose backend: Node.js (Next.js API routes) or FastAPI
+🚀 Set up Supabase or Prisma for DB access
+🛠️ Import Hevy workouts (CSV/manual for now)
+
+5/23 1:42 AM 
+I have not done any of the shit in Phase 2 as of writing except for the half-assed
+Strava button. What I am doing now though is messing around with tailwind making
+dummy stuff in the pages to simulate what I have in mind. 
+
+5/23 4:29 PM
+I managed to make a good chunk of dummy data in the workouts page but now I'm
+rethinking about the presentation in that particular page. The individual workouts
+are good and all, however, I'm imagining that a calendar which has a visible
+schedule might be good to put as a header. I'm probably going to do that later
+tonight. As for now, I'll just keep it here for reference as I gotta take a shit
+and go to the gym.
+
+I could probably link my Google calendar in the page like an iframe or embed it? 
+idk, that's where I put the schedule anyway.
+
+5/24 2:07 AM
+I haven't put the calendar yet but I've thought of something else. The homepage
+feels really empty and I'll make that work. Done.
+
+I got a suggested layout from ChatGPT and this might be the way to go.
+🟦 Hero Section
+🧾 About Project Summary
+💡 Key Features
+🛠️ Tech Stack (logos or tags)
+📸 Screenshot preview of dashboard
+📎 Links (GitHub, Live Site)
+
+No actual stuff for now but the clearer visuals make it easy for me to see how
+it would look like.
+
+
+📍 Phase 3: Analytics & Visualizations
+
+📈 Add time-series chart: distance over time
+💓 Visualize heart rate and pace (if available)
+🎯 Show goal progress (weekly, monthly)
+🧩 Add filters: date range, activity type
+🥇 Highlight personal records / milestones
+
+📍 Phase 4: UX Polish & Expansion
+
+🌓 Add responsive layout + dark mode
+🎞️ Add animations with Framer Motion
+⚠️ Add error handling and loading states
+🧪 Test data edge cases (no workouts, long gaps)
+📃 Build About/Tech Stack page
+
+📍 Phase 5: Launch & Share
+
+📦 Final deployment to Vercel + Railway/Render
+🎥 Record walkthrough video or Loom demo
+📑 Write short blog or case study
+🔗 Link from portfolio site
+🧠 Gather feedback from peers

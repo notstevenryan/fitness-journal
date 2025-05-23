@@ -22,7 +22,7 @@ const data = [
 
 export default function WeeklyChart() {
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 mt-8">
+    <div className="bg-zinc-800 shadow-md rounded-lg p-4 mt-8">
       <h3 className="text-lg font-semibold mb-2">Weekly Duration (minutes)</h3>
       <ResponsiveContainer width="100%" height={250}>
         <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>

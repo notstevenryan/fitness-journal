@@ -29,9 +29,6 @@ export default function DashboardPage() {
   return (
     <section>
       <h2 className="text-3xl font-semibold mb-6">📊 Dashboard</h2>
-      <div>
-      </div>
-      <br></br>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         {mockWorkouts.map((workout, index) => (
@@ -40,7 +37,6 @@ export default function DashboardPage() {
         ))}
       </div>
       <WeeklyChart />
-      
     </section>
   );
 }

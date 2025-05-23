@@ -14,7 +14,8 @@ export default function StravaConnectButton() {
   return (
     <button
       onClick={handleConnect}
-      className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
+      className="w-48 h-12 bg-orange-600 text-white 
+      px-4 py-2 rounded hover:bg-orange-700 transition"
     >
       Connect with Strava
     </button>
