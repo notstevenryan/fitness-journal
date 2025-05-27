@@ -37,23 +37,31 @@ const mockCardio = [
 
 export default function WorkoutsPage() {
   return (
-    <section>
-      <h2 className="text-3xl font-bold mb-4">Workouts</h2>
-      <p className="text-gray-400">
-        Detailed list of strength and cardio workouts.</p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <main>
+        <section>
+        <h2 className="text-3xl font-bold mb-4">Workouts</h2>
+        <p className="text-gray-400">
+          Detailed list of strength and cardio workouts.</p>
 
-        {mockExercises.map((exercise, index) => (
-          <Exercise key={index} {...exercise}
-          />
-        ))}
+        <div className="bg-zinc-900 rounded-lg p-4 space-y-4">
+          <p>Lifting Exercises</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {mockExercises.map((exercise, index) => (
+              <Exercise key={index} {...exercise}
+              />
+            ))}
+          </div>
 
-        {mockCardio.map((cardio, index) => (
-          <Cardio key={index} {...cardio}
-          />
-        ))}
+          <p>Cardio Exercises</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {mockCardio.map((cardio, index) => (
+              <Cardio key={index} {...cardio}
+              />
+            ))}
+          </div>
+        </div>
 
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }

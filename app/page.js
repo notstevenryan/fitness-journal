@@ -1,8 +1,8 @@
 export default function HomePage() {
   return (
-    <main className="px-4 md:px-12 py-12 max-w-6xl mx-auto">
+    <main className="px-4 md:px-12 py-12 max-w-6xl mx-auto bg-zinc-900 shadow-md rounded-lg p-4 space-y-4">
       {/* Hero */}
-      <section className="text-center mb-12">
+      <section className="text-center mb-12 ">
         <h1 className="text-4xl font-bold mb-4">🏋️‍♂️ Fitness Journal</h1>
         <p className="text-lg text-gray-200">
           Track. Visualize. Analyze your fitness data from Strava and Hevy — all in one place.
@@ -10,7 +10,7 @@ export default function HomePage() {
       </section>
 
       {/* About */}
-      <section className="mb-12">
+      <section className="mb-12 ">
         <h2 className="text-2xl font-semibold mb-2">📖 About This Project</h2>
         <p className="text-gray-400">
           Fitness Journal is a full-stack web app that pulls your workout data from Hevy and Strava,
@@ -20,7 +20,7 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="mb-12">
+      <section className="mb-12 ">
         <h2 className="text-2xl font-semibold mb-2">✨ Features</h2>
         <ul className="list-disc list-inside text-gray-400 space-y-1">
           <li>Clean, responsive dashboard UI</li>
@@ -31,19 +31,21 @@ export default function HomePage() {
       </section>
 
       {/* Tech Stack */}
-      <section className="mb-12">
+      <section className="mb-12 ">
         <h2 className="text-2xl font-semibold mb-2">🛠️ Tech Stack</h2>
         <div className="flex flex-wrap gap-3 text-sm">
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">Next.js</span>
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">TailwindCSS</span>
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">Recharts</span>
-          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">Supabase</span>
-          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">Vercel</span>
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">
+            Prisma</span>
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">
+            Vercel</span>
         </div>
       </section>
 
       {/* Screenshot (placeholder for now) */}
-      <section className="mb-12">
+      <section className="mb-12 ">
         <h2 className="text-2xl font-semibold mb-2">📸 Preview</h2>
         <div className="bg-gray-100 border rounded-lg overflow-hidden">
           <div className="aspect-w-16 aspect-h-9 bg-gray-800 flex items-center justify-center text-gray-200">

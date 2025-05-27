@@ -5,14 +5,16 @@ export default function Navbar() {
     <nav className="bg-black shadow-md py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/">
-          <h1 className="font-bold text-xl">🏋️👟 Fitness Journal
+          <h1 className="font-bold text-lg">Home
           </h1>
         </Link>
         <div className="space-x-4">
           <Link href="/dashboard">Dashboard</Link>
           <Link href="/workouts">Workouts</Link>
           <Link href="/analytics">Analytics</Link>
-          <Link href="/about">About</Link>
+          <Link href="/gear">Gear</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/about">About Me</Link>
         </div>
       </div>
     </nav>
