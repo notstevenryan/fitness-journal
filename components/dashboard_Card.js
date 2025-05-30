@@ -9,7 +9,7 @@ export default function dashboardCard({
   }) {
 
   return (
-    <div className="bg-zinc-800 shadow-md p-4 space-y-2">
+    <div className="bg-zinc-800 shadow-md p-4 space-y-2 rounded-md">
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="text-sm text-gray-100">{type} · {date}</p>
       <p className="text-gray-400">Duration: {duration}</p>

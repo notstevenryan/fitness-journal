@@ -1,0 +1,6 @@
+import prisma from '@/lib/prisma';
+
+export async function GET() {
+  const routines = await prisma.routines.findMany();
+  return Response.json(routines);
+}

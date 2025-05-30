@@ -7,7 +7,7 @@ export default function HomePage() {
         <p className="text-lg text-gray-200">
           Track. Visualize. Analyze your fitness data from Strava and Hevy — all in one place.
         </p>
-      </section>-----
+      </section>
 
       {/* About */}
       <section className="mb-12 ">
@@ -47,7 +47,7 @@ export default function HomePage() {
       {/* Screenshot (placeholder for now) */}
       <section className="mb-12 ">
         <h2 className="text-2xl font-semibold mb-2">📸 Preview</h2>
-        <div className="bg-gray-100 border rounded-lg overflow-hidden">
+        <div className="bg-gray-100 border rounded-md overflow-hidden">
           <div className="aspect-w-16 aspect-h-9 bg-gray-800 flex items-center justify-center text-gray-200">
             {/* Replace this with an image tag if you have a screenshot */}
             <span>Dashboard Screenshot (coming soon)</span>

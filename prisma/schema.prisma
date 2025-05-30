@@ -1,0 +1,88 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Equipment {
+  Barbell
+  Dumbbell
+  Machine
+  Cable
+  Bodyweight
+  Other
+}
+
+enum MuscleGroup {
+  Quadriceps
+  Hamstrings
+  Glutes
+  Chest
+  Back
+  Shoulders
+  Biceps
+  Triceps
+  Core
+}
+
+enum Schedule {
+  Monday
+  Tuesday
+  Wednesday
+  Thursday
+  Friday
+  Saturday
+  Sunday
+}
+
+enum IntensityLevel {
+  Recovery
+  Zone1
+  Zone2
+  Tempo
+  Intervals
+  MaxEffort
+}
+
+
+model routine_Lift {
+  id              Int      @id @default(autoincrement())
+  title           String   // e.g. "Squat (Barbell)"
+  notes           String?  // e.g. training cues, alternatives
+
+  equipment       Equipment
+  unoMuscleGroup  MuscleGroup
+  dosMuscleGroup  MuscleGroup?
+
+  sets            Int      // 4
+  repsMin         Int      // 6
+  repsMax         Int      // 10
+  restSeconds     Int      // 120 (2 min = 120s)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model routine_Cardio {
+  id          Int       @id @default(autoincrement())
+  title       String    // e.g. "Easy Run", "Long Ride"
+  objective   String    // instructions or training goal
+  schedule    Schedule  // e.g. "Monday", "Wednesday"
+  time        String    // e.g. "6:00 PM"
+
+  durationMin Int              // estimated duration in minutes
+  intensity   IntensityLevel   // e.g. "Zone 2", "Moderate", "Intervals"
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

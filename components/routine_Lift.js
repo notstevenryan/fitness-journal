@@ -8,7 +8,7 @@ export default function routineLift ({
     })  {
 
     return (
-        <div className="bg-zinc-800 shadow-md p-4 space-y-2">
+        <div className="bg-zinc-800 shadow-md p-4 space-y-2 rounded-md">
             <p className="text-lg text-gray-100 font-semibold">{title}</p>
             <p className="text-sm text-gray-400">{type}</p>
             <p className="text-sm text-gray-200 italic">{notes}</p>

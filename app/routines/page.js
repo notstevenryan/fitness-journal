@@ -36,10 +36,11 @@ const mockCardio = [
 export default function WorkoutsPage() {
   return (
     <main>
-      <section className='bg-zinc-900 shadow-md p-4 space-y-4 max-w-5xl mx-auto'>
+      <section className='bg-zinc-900 shadow-md p-4 space-y-4 
+      max-w-5xl mx-auto rounded-md'>
         <h2 className="text-3xl font-bold mb-4">💪 Routines</h2>
 
-        <div className="bg-zinc-900 p-4 space-y-4 bort">
+        <div className="bg-zinc-900 p-2 space-y-4 bort">
           <p className="text-lg font-semibold">Lifting Exercises</p>
           <div className="grid auto-cols-auto grid-flow-col gap-4 ">
             {mockLift.map((lift, index) => (

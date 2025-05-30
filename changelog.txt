@@ -1,3 +1,29 @@
+5/31 3:26 AM
+
+So far I'm making some progress even if a tiny bit. I managed to setup the tables
+across Prisma and Railway. The tables are live now which are aptly named:
+
+-routine_Lift
+-routine_Cardio
+
+It's a bit late for me and I'm getting tired so I'll leave it empty for tonight.
+I'll prep the seed file tomorrow and push it to the db so I can pull it for the
+front end tomorrow.
+
+-----------------------------------------------------------
+
+5/31 2:38 AM
+
+- replaced font from Arial to Montserrat
+- restyled pages again for uniformity
+- as of writing, I'm setting up a database for the routines for cleaner code.
+
+there's lots of shit to do with prisma and railway but despited the complexity, 
+it interests me with how it works. Supabase was a breeze compared to this, however
+I'd like to learn other stuff as well.
+
+-----------------------------------------------------------
+
 5/30 3:46 PM
 
 - removed Analytics page

@@ -31,23 +31,26 @@ const mockWorkouts = [
 export default function DashboardPage() {
   return (
     <section className='max-w-5xl mx-auto'>
-      <div className='bg-zinc-900 shadow-md p-4 space-y-4 '>
+      <div className='bg-zinc-900 shadow-md p-4 space-y-4 rounded-md'>
         <h2 className="text-3xl font-semibold mb-4">📊 Dashboard</h2>
         <h3 className='text-2xl font-semibold b-4'>Calendar</h3>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-          Choose from the ff:
-          fullcalendar.io
-          react-calendar
-          <WeeklyChart />
-        </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div>
+            reactCalendar
+          </div>
+          <div>
+            <WeeklyChart />
+          </div>
+
+          </div>
       </div>
 
       <br></br>
 
-      <div className='bg-zinc-900 shadow-md p-4 space-y-4'>
+      <div className='bg-zinc-900 shadow-md p-4 space-y-4 rounded-md'>
         <p className='text-2xl font-semibold mb-4 '> Recent Workouts</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {mockWorkouts.map((workout, index) => (
             <WorkoutCard key={index} {...workout}
             />
