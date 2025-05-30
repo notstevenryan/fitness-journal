@@ -1,3 +1,24 @@
+5/30 3:46 PM
+
+- removed Analytics page
+- renamed Workouts to Routine
+- renamed components to better reflect function
+- adjusted size of elements
+
+-----------------------------------------------------------
+
+5/28 2:38 AM
+
+[pending] New layout for dashboard page
+
+📊 Dashboard Title
+
+📅 Weekly Summary + Calendar (side-by-side or stacked)
+📈 Weekly Chart
+📦 Workout Cards
+
+-----------------------------------------------------------
+
 5/27 1:59 AM
 
 I still haven't put the calendar lol. What I did though, was update the pages and
@@ -14,11 +35,18 @@ and shit from the capstone project so I added it to most of the pages.
 To-Do list for next session, add the damn calendar. Or maybe make the page a little
 more blog like or whatever. 
 
-use the following sites for UX/UI reference:
-https://www.strava.com/dashboard
-https://hevy.com/
+use the following sites for UX/UI reference
+Fitness:
+    https://www.strava.com/dashboard
+    https://hevy.com/
+    https://titangymapp.com/
+    https://myraceindex.com/
 
-https://marronisgoing.com/
+Portfolios:
+    https://mattglei.ch/
+    https://marronisgoing.com/
+
+-----------------------------------------------------------
 
 5/24 2:07 AM
 I haven't put the calendar yet but I've thought of something else. The homepage
@@ -34,6 +62,8 @@ I got a suggested layout from ChatGPT and this might be the way to go.
 
 No actual stuff for now but the clearer visuals make it easy for me to see how
 it would look like.
+
+-----------------------------------------------------------
 
 5/23 4:29 PM
 I managed to make a good chunk of dummy data in the workouts page but now I'm

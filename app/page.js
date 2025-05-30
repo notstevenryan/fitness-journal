@@ -1,13 +1,13 @@
 export default function HomePage() {
   return (
-    <main className="px-4 md:px-12 py-12 max-w-6xl mx-auto bg-zinc-900 shadow-md rounded-lg p-4 space-y-4">
+    <main className="px-4 md:px-12 py-12 max-w-5xl mx-auto bg-zinc-900 shadow-md p-4 space-y-4">
       {/* Hero */}
       <section className="text-center mb-12 ">
         <h1 className="text-4xl font-bold mb-4">🏋️‍♂️ Fitness Journal</h1>
         <p className="text-lg text-gray-200">
           Track. Visualize. Analyze your fitness data from Strava and Hevy — all in one place.
         </p>
-      </section>
+      </section>-----
 
       {/* About */}
       <section className="mb-12 ">
@@ -24,7 +24,7 @@ export default function HomePage() {
         <h2 className="text-2xl font-semibold mb-2">✨ Features</h2>
         <ul className="list-disc list-inside text-gray-400 space-y-1">
           <li>Clean, responsive dashboard UI</li>
-          <li>Workout card previews</li>
+          <li>Routine card previews</li>
           <li>Interactive Recharts visualizations</li>
           <li>Upcoming: API integrations with Strava + Hevy</li>
         </ul>

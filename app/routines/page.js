@@ -1,11 +1,11 @@
-import Exercise from "@/components/Exercise";
-import Cardio from "@/components/Cardio";
+import Lift from "@/components/routine_Lift";
+import Cardio from "@/components/routine_Cardio";
 
-const mockExercises = [ 
+const mockLift = [ 
   {
   title: 'Squat - Barbell',
   type: '🏋️ Strength Training',
-  notes: 'Experiment with the stance to see what feels most comfortable. Aim to get your thighs parallel to the floor and pause briefly at the bottom to limit the assistance from the stretch reflex. Front squats and leg presses are good alternatives.',
+  notes: '',
   sets: '3 Sets',
   reps: '6-10 Reps',
   rest: 'Rest 2min 0s'
@@ -13,7 +13,7 @@ const mockExercises = [
 ];
 
 const mockCardio = [
-  { title: 'Intervals',
+  { title: 'Intervals Run',
     type: '👟 Cardio Training',
     objective: 'Alternate weekly between:\n • Easier: 1 min run / 1 min walk x5–6\n • Harder: 2 min run / 1 min walk x 4\n Try to increase run reps or total running time weekly.',
     schedule: 'Monday',
@@ -31,36 +31,31 @@ const mockCardio = [
     schedule: 'Friday',
     time: '6:00 PM'
   }, 
-
-
 ]
 
 export default function WorkoutsPage() {
   return (
     <main>
-        <section>
-        <h2 className="text-3xl font-bold mb-4">Workouts</h2>
-        <p className="text-gray-400">
-          Detailed list of strength and cardio workouts.</p>
+      <section className='bg-zinc-900 shadow-md p-4 space-y-4 max-w-5xl mx-auto'>
+        <h2 className="text-3xl font-bold mb-4">💪 Routines</h2>
 
-        <div className="bg-zinc-900 rounded-lg p-4 space-y-4">
-          <p>Lifting Exercises</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {mockExercises.map((exercise, index) => (
-              <Exercise key={index} {...exercise}
+        <div className="bg-zinc-900 p-4 space-y-4 bort">
+          <p className="text-lg font-semibold">Lifting Exercises</p>
+          <div className="grid auto-cols-auto grid-flow-col gap-4 ">
+            {mockLift.map((lift, index) => (
+              <Lift key={index} {...lift}
               />
             ))}
           </div>
 
-          <p>Cardio Exercises</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <p className="text-lg font-semibold">Cardio Exercises</p>
+          <div className="grid auto-cols-auto grid-flow-col gap-4">
             {mockCardio.map((cardio, index) => (
               <Cardio key={index} {...cardio}
               />
             ))}
           </div>
         </div>
-
       </section>
     </main>
   );

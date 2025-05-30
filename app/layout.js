@@ -1,7 +1,7 @@
 // app/layout.js
 import './globals.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../components/main_Navbar';
+import Footer from '../components/main_Footer';
 
 export const metadata = {
   title: 'Fitness Journal',

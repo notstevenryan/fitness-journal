@@ -1,6 +1,7 @@
-import WorkoutCard from '../../components/WorkoutCard';
-import WeeklyChart from '../../components/WeeklyChart';
+import WorkoutCard from '../../components/dashboard_Card';
+import WeeklyChart from '../../components/dashboard_WeeklyChart';
 
+//sample workouts
 const mockWorkouts = [
   {
     title: 'Morning Ride',
@@ -25,20 +26,34 @@ const mockWorkouts = [
   },
 ];
 
+//calendar function
+
 export default function DashboardPage() {
   return (
-    <section>
-      <h2 className="text-3xl font-semibold mb-6">📊 Dashboard</h2>
-      <div className='bg-zinc-900 shadow-md rounded-lg p-4 space-y-4'>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+    <section className='max-w-5xl mx-auto'>
+      <div className='bg-zinc-900 shadow-md p-4 space-y-4 '>
+        <h2 className="text-3xl font-semibold mb-4">📊 Dashboard</h2>
+        <h3 className='text-2xl font-semibold b-4'>Calendar</h3>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+          Choose from the ff:
+          fullcalendar.io
+          react-calendar
+          <WeeklyChart />
+        </div>
+      </div>
+
+      <br></br>
+
+      <div className='bg-zinc-900 shadow-md p-4 space-y-4'>
+        <p className='text-2xl font-semibold mb-4 '> Recent Workouts</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {mockWorkouts.map((workout, index) => (
             <WorkoutCard key={index} {...workout}
             />
           ))}
         </div>
-        <WeeklyChart />
       </div>
-
     </section>
   );
 }
