@@ -1,0 +1,14 @@
+import { prisma } from "@/lib/db"; // your db client
+
+export async function GET() {
+  try {
+    const lifts = await prisma.routine_Lift.findMany();
+    const cardio = await prisma.routine_Cardio.findMany();
+    const stretch = await prisma.routine_Stretching.findMany(); // only if you created this table
+
+    return Response.json({ lifts, cardio, stretch });
+  } catch (error) {
+    console.error("Error fetching routines:", error);
+    return new Response("Failed to fetch routines", { status: 500 });
+  }
+}

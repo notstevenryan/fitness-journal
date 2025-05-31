@@ -14,26 +14,62 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+//LIFTING
+
 enum Equipment {
+  None
   Barbell
   Dumbbell
+  Kettlebell
   Machine
-  Cable
-  Bodyweight
+  Plate
+  ResistanceBand
+  Suspension
   Other
 }
 
 enum MuscleGroup {
-  Quadriceps
-  Hamstrings
-  Glutes
-  Chest
-  Back
-  Shoulders
+  Abdominals
+  Abductors
+  Adductors
   Biceps
+  LowerBack
+  UpperBack
+  Cardio
+  Chest
+  Calves
+  Forearms
+  Glutes
+  Hamstrings
+  Lats
+  Quadriceps
+  Shoulders
   Triceps
-  Core
+  Traps
+  Neck
+  FullBody
+  Other
 }
+
+model routine_Lift {
+  id    Int     @id @default(autoincrement())
+  title String // e.g. "Squat (Barbell)"
+  notes String? // e.g. training cues, alternatives
+
+  equipment      Equipment
+  unoMuscleGroup MuscleGroup
+  dosMuscleGroup MuscleGroup[]
+
+  sets        Int // 4
+  repsMin     Int // 6
+  repsMax     Int // 10
+  restSeconds Int // 120 (2 min = 120s)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+//CARDIO
 
 enum Schedule {
   Monday
@@ -54,35 +90,56 @@ enum IntensityLevel {
   MaxEffort
 }
 
+model routine_Cardio {
+  id        Int      @id @default(autoincrement())
+  title     String // e.g. "Easy Run", "Long Ride"
+  objective String // instructions or training goal
+  schedule  Schedule // e.g. "Monday", "Wednesday"
+  time      String // e.g. "6:00 PM"
 
-model routine_Lift {
-  id              Int      @id @default(autoincrement())
-  title           String   // e.g. "Squat (Barbell)"
-  notes           String?  // e.g. training cues, alternatives
+  durationMin Int // estimated duration in minutes
+  intensity   IntensityLevel // e.g. "Zone 2", "Moderate", "Intervals"
 
-  equipment       Equipment
-  unoMuscleGroup  MuscleGroup
-  dosMuscleGroup  MuscleGroup?
-
-  sets            Int      // 4
-  repsMin         Int      // 6
-  repsMax         Int      // 10
-  restSeconds     Int      // 120 (2 min = 120s)
-
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
-model routine_Cardio {
-  id          Int       @id @default(autoincrement())
-  title       String    // e.g. "Easy Run", "Long Ride"
-  objective   String    // instructions or training goal
-  schedule    Schedule  // e.g. "Monday", "Wednesday"
-  time        String    // e.g. "6:00 PM"
+//STRETCHING
 
-  durationMin Int              // estimated duration in minutes
-  intensity   IntensityLevel   // e.g. "Zone 2", "Moderate", "Intervals"
+enum StretchType {
+  PostLift
+  PostRun
+}
 
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+enum StretchSide {
+  Each
+  Both
+}
+
+model routine_Stretch {
+  id          Int         @id @default(autoincrement())
+  title       String // e.g. "Post-Lifting Stretch Routine"
+  context     String // e.g. "Use after Full Body 1, 2, or 3 workouts"
+  durationMin Int // estimated total time
+  category    StretchType // e.g. "Post-Lift", "Post-Run"
+  side        StretchSide
+
+  items stretch_Item[] // 1-to-many relationship
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model stretch_Item {
+  id        Int             @id @default(autoincrement())
+  routine   routine_Stretch @relation(fields: [routineId], references: [id])
+  routineId Int
+
+  section  String // e.g. "Lower Body", "Upper Body"
+  name     String // e.g. "Standing Quad Stretch"
+  duration String // e.g. "1 min per leg", "45 sec per arm"
+  notes    String? // e.g. target muscles or purpose
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

@@ -1,3 +1,23 @@
+5/31 4:08 PM
+
+After a decent amount of time wrestling with the setup of Prisma and Railway, I
+managed to complete the backend of the routines page. Added are the ff tables
+complete with the the necessary routines that I'm doing at the moment.
+
+- routine_Lift
+- routine_Cardio
+- routine_Stretch
+- stretch_Item
+
+Each table is completely populated with my current lifting and cardio routines via 
+a seed script (which is new to me btw). The stretching tables also includes separate 
+stretching for each. I can work on that more and display it now on the frontend 
+but I need to go get lifting IRL already. 🤷
+
+Overall another big W for me today.
+
+-----------------------------------------------------------
+
 5/31 3:26 AM
 
 So far I'm making some progress even if a tiny bit. I managed to setup the tables
